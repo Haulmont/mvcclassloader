@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Hello from WelcomeController version ${version}</h1>
+<h1>Hello from WelcomeController. Version: ${version}</h1>
 
 </body>
 </html>
