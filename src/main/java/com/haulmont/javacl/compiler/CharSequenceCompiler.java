@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2008-2013 Haulmont. All rights reserved.
- * Use is subject to license terms, see http://www.cuba-platform.com/license for details.
- */
 package com.haulmont.javacl.compiler;
 
 import com.haulmont.javacl.ProxyClassLoader;
@@ -18,12 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Compile a String or other {@link CharSequence}, returning a Java
- * {@link Class} instance that may be instantiated. This class is a Facade
- * around {@link javax.tools.JavaCompiler} for a narrower use case, but a bit easier to use.
- * <p/>
- */
 public class CharSequenceCompiler<T> {
     // Compiler requires source files with a ".java" extension:
     static final String JAVA_EXTENSION = ".java";

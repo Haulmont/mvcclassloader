@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2008-2013 Haulmont. All rights reserved.
- * Use is subject to license terms, see http://www.cuba-platform.com/license for details.
- */
-
 package com.haulmont.javacl.compiler;
 
 import javax.tools.DiagnosticCollector;
@@ -12,12 +7,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * An exception thrown when trying to compile Java programs from strings
- * containing source.
- * 
- * @author <a href="mailto:David.Biesack@sas.com">David J. Biesack</a>
- */
 public class CharSequenceCompilerException extends Exception {
    private static final long serialVersionUID = 1L;
    /**

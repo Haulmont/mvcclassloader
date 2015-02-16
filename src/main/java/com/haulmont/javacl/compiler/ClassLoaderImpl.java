@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2008-2013 Haulmont. All rights reserved.
- * Use is subject to license terms, see http://www.cuba-platform.com/license for details.
- */
 package com.haulmont.javacl.compiler;
 
 import com.haulmont.javacl.ProxyClassLoader;
@@ -15,9 +11,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * A custom ClassLoader which maps class names to JavaFileObjectImpl instances.
- */
 final class ClassLoaderImpl extends ClassLoader {
     private final Map<String, JavaFileObject> classes = new HashMap<String, JavaFileObject>();
     private final ProxyClassLoader proxyClassLoader;

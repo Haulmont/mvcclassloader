@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2008-2013 Haulmont. All rights reserved.
- * Use is subject to license terms, see http://www.cuba-platform.com/license for details.
- */
 package com.haulmont.javacl.compiler;
 
 import javax.tools.*;
@@ -12,12 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * A JavaFileManager which manages Java source and classes. This FileManager
- * delegates to the JavaFileManager and the ClassLoaderImpl provided in the
- * constructor. The sources are all in memory CharSequence instances and the
- * classes are all in memory byte arrays.
- */
 final class FileManagerImpl extends ForwardingJavaFileManager<JavaFileManager> {
    // the delegating class loader (passed to the constructor)
    private final ClassLoaderImpl classLoader;
