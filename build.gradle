@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+def tomcatDir = "/home/degtyarjov/projects/temp/tomcat/"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+//Project dependencies
+dependencies {
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+    compile 'jstl:jstl:1.2'
+    compile(group: 'commons-lang', name: 'commons-lang', version: '2.6')
+    compile(group: 'commons-io', name: 'commons-io', version: '1.4')
+    compile(group: 'commons-collections', name: 'commons-collections', version: '3.2.1')
+    compile(group: 'com.google.guava', name: 'guava', version: '16.0.1')
+
+    providedCompile 'javax.servlet:servlet-api:2.5'
+}
+
+task deploy(type: Copy) {
+    from file('build/libs')
+    include '*.war'
+    into "$tomcatDir/webapps"
+}
